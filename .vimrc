@@ -139,13 +139,6 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-try
-    colorscheme desert
-catch
-endtry
-
-set background=dark
-
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
@@ -411,8 +404,12 @@ Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'bling/vim-airline'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
+
+colorscheme gruvbox
+set background=dark
 
 nnoremap <C-p> :Files<CR>
 nnoremap <leader>b :Buffers<CR>
